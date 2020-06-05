@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>1beijing.png</file>
+        <file>2beijing.png</file>
+        <file>start.png</file>
+        <file>SeedBank1.png</file>
+        <file>kapai1.png</file>
+        <file>kapai2.png</file>
+        <file>peashot1.png</file>
+        <file>sunflower.png</file>
+        <file>lu1.png</file>
+    </qresource>
+</RCC>
