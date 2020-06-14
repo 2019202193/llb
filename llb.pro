@@ -1,5 +1,7 @@
 
 
+
+
 QT += core gui widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -11,6 +13,7 @@ CONFIG += qt
 SOURCES += \
         Pea.cpp \
         Sunflower.cpp \
+        bullet.cpp \
         game.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -25,6 +28,7 @@ FORMS += \
 HEADERS += \
     Pea.h \
     Sunflower.h \
+    bullet.h \
     game.h \
     mainwindow.h \
     position.h \

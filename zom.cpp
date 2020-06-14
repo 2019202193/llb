@@ -1,13 +1,16 @@
 #include "zom.h"
 #include<QVector2D>
-zom::zom(way *s):QObject(0),zombiapos(s->mywaypos)
+#include"Pea.h"
+#include"game.h"
+zom::zom(way *s, game *ga):QObject(0),zombiapos(s->mywaypos)
 {
+  g=ga;
   zombialife=10;
-     currentlife=10;
+
      myaction=false;
    gameover=false;
   zombiamap.load(":/lu1.png");
-  zombiamap=zombiamap.scaled(zombiamap.width(),zombiamap.height()*0.9);
+  zombiamap=zombiamap.scaled(zombiamap.width(),zombiamap.height()*0.8);
    walkspeed=1.0;
 }
 void zom::drawzom(QPainter*painter){
@@ -32,4 +35,17 @@ void zom::move1(){
  }
 void zom::action(){
   myaction=true;
+}
+void zom::getdamage(int s){
+  zombialife-=s;
+  if(zombialife<=0)canremove();
+}
+void zom::canremove(){
+   if(attackpea.empty())return;
+   foreach(pea*at,attackpea)
+     at->targetkilled();
+   g->removezom(this);
+}
+void zom::getattacked(pea *p){
+  attackpea.push_back(p);
 }

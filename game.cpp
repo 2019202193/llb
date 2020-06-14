@@ -103,7 +103,7 @@ game::game(QWidget *parent) : QMainWindow(parent)
 
        if(it->containpos(presspos)&&!it->haspos()){
            it->setpos();
-           pea*mypea=new pea(it->centerpos());
+           pea*mypea=new pea(it->centerpos(),this);
            mypeashoot.push_back(mypea);
            update();
            break;
@@ -147,7 +147,7 @@ bool game::loadwave(){
    way *startway=mywayvector[2];
    int interval[]={100,500,600,1000,3000,6000};
    for(int i=0;i<6;i++){
-       zom*zombia=new zom(startway);
+       zom*zombia=new zom(startway,this);
        myzombias.push_back(zombia);
        QTimer::singleShot(interval[i],zombia,SLOT(action()));
  }return true;
