@@ -11,7 +11,7 @@ public:
 
 
   QPoint mywaypos;
-
+  ~way(){}
 };
 
 #endif // WAY_H

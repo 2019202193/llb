@@ -3,9 +3,11 @@
 
 #include <QWidget>
 #include<QObject>
+#include<QPainter>
+#include<QMainWindow>
 #include"zom.h"
 class game;
-#include<QPropertyAnimation>
+
 class bullet:public QObject
 {
   Q_OBJECT
@@ -17,16 +19,25 @@ public:
   QPoint targetpos;
   QPoint currentpos;
   QPixmap bul;
-
+  int speed;
   zom*target;
   game*g;
   int shoot;
-  void draw(QPainter*painter);
+  virtual void draw(QPainter*painter);
   void movepea();
   void setcpos(QPoint p);
   QPoint current();
-private slots:
+
   void hittarget();
+  virtual ~bullet(){}
+
+};
+class icebul:public bullet{
+public:
+  icebul(QPoint sp,QPoint tp,game*ga,zom*z);
+  QPixmap bul;
+  void draw(QPainter *painter) override;
+  ~icebul(){}
 };
 
 #endif // BULLET_H

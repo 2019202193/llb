@@ -15,18 +15,40 @@ public:
   int zombialife;
     bool myaction;
    game*g;
+   int k,m;
+   bool pan;
     QPoint zombiapos;
-    QPixmap zombiamap;
-    bool gameover;
+
+    QPixmap zombiapix;
+
     double walkspeed;
-    void drawzom(QPainter*painter);
-    void move1();
-   void getdamage(int s);
-   void canremove();
+    virtual void drawzom(QPainter*painter);
+    virtual void move1();
+    virtual void getdamage(int s);
+    virtual void canremove();
    QList<pea*>attackpea;
-   void getattacked(pea*p);
-public slots:
-void action();
+   virtual void getattacked(pea*p);
+    virtual void attack1();
+   virtual void action();
+
+  int x;
+  virtual~zom(){}
+};
+class upzom:public zom{
+  Q_OBJECT
+public:
+
+  upzom(way*s,game*ga);
+  QPixmap zombiamap[8],zombiapix;
+  int zombialife;
+  void drawzom(QPainter *painter) override;
+  void move1() override;
+  void getdamage(int s) override;
+void attack1() override;
+  void canremove() override;
+  void action() override;
+  void getattacked(pea *p) override;
+  ~upzom(){}
 };
 
 #endif // ZOM_H

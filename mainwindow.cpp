@@ -9,6 +9,13 @@ MainWindow::MainWindow(QWidget *parent) :
   this->setFixedSize(800,600);
   pushbutton*start=new pushbutton(":/start.png");
   start->setParent(this);
+ a=new audio;
+  a->startBGM();
+  /*QMediaPlayer*player = new QMediaPlayer;
+  player->setMedia(QUrl(":/plantsVSzombias.mp3"));
+  player->setVolume(100);
+  player->play();*/
+
 
   connect(start,&pushbutton::clicked,[=](){
       this->hide();
@@ -23,8 +30,8 @@ MainWindow::~MainWindow()
   delete ui;
 }
 void MainWindow::paintEvent(QPaintEvent *){
-    QPainter painter(this);//在mainwindow上画
-    QPixmap pixmap(":/1beijing.png");//添加qt资源文件使用相对路径
-    painter.drawPixmap(0,0,800,600/*适应屏幕大小*/,pixmap);
+    QPainter painter(this);
+    QPixmap pixmap(":/1beijing.png");
+    painter.drawPixmap(0,0,800,600,pixmap);
 
 }

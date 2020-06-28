@@ -13,7 +13,7 @@ public:
   void rebackpos();
   bool containpos(const QPoint &pos);
   const QPoint centerpos();
-
+  ~position(){}
 private:
    QPoint myposition;
    bool mypea;

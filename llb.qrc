@@ -6,9 +6,40 @@
         <file>SeedBank1.png</file>
         <file>kapai1.png</file>
         <file>kapai2.png</file>
-        <file>peashot1.png</file>
         <file>sunflower.png</file>
-        <file>lu1.png</file>
         <file>pea.png</file>
+        <file>lu1.png</file>
+        <file>lu2.png</file>
+        <file>lu3.png</file>
+        <file>lu4.png</file>
+        <file>lu5.png</file>
+        <file>lu6.png</file>
+        <file>lu7.png</file>
+        <file>lu8.png</file>
+        <file>pea1.png</file>
+        <file>pea2.png</file>
+        <file>pea3.png</file>
+        <file>pea4.png</file>
+        <file>pea5.png</file>
+        <file>pea6.png</file>
+        <file>pea7.png</file>
+        <file>pea8.png</file>
+        <file>pea9.png</file>
+        <file>pu11.png</file>
+        <file>kapai3.png</file>
+        <file>ice1.png</file>
+        <file>ice2.png</file>
+        <file>ice3.png</file>
+        <file>ice4.png</file>
+        <file>ice5.png</file>
+        <file>ice6.png</file>
+        <file>ice7.png</file>
+        <file>ice8.png</file>
+        <file>icebul.png</file>
+        <file>win.png</file>
+        <file>lose.png</file>
+        <file>up.png</file>
+        <file>bank.png</file>
+        <file>zombiaVSplants.mp3</file>
     </qresource>
 </RCC>

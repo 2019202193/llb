@@ -12,7 +12,7 @@ public:
    QString pressimage;
    double widthrate;
    double heightrate;
-
+   ~pushbutton(){}
 signals:
 
 };
